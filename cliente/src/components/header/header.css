@@ -1,0 +1,169 @@
+section.mainHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--azul-claro);
+}
+
+section.mainHeader.active {
+    height: 100vh;
+}
+
+section.mainHeader .logo {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+section.mainHeader .logo > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 900;
+}
+
+section.mainHeader .logo h2 {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+section.mainHeader .logo .img {
+    font-size: 2rem;
+}
+
+section.mainHeader .links,
+section.mainHeader .actions {
+    display: flex;
+}
+
+section.mainHeader .links .estagio {
+    position: relative;
+    text-align: center;
+    padding: 0.1rem 1rem;
+}
+
+section.mainHeader .links .estagio:hover {
+    position: relative;
+    width: calc(300px + 1rem);
+}
+
+section.mainHeader .links .estagio a:nth-child(1) {
+    font-weight: 800;
+}
+
+section.mainHeader .links .estagio:hover a,
+section.mainHeader .actions a:hover {
+    color: var(--branco);
+    transform: scale(1.2);
+}
+
+section.mainHeader .links .estagio .hidden_links {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: var(--azul-claro);
+    width: 100%;
+    padding-top: 0.9rem;
+}
+
+section.mainHeader .links .estagio:hover .hidden_links {
+    display: flex;
+}
+
+section.mainHeader .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;  
+    font-weight: 700;
+}
+
+section.mainHeader .responsive {
+    display: none;
+}
+
+section.mainHeader .responsive * {
+    transition: 0.3s ease-in-out;
+}
+
+section.mainHeader .responsive *:nth-child(1) {
+    display: flex;
+    font-size: 2rem;
+}
+
+section.mainHeader .responsive *:nth-child(1):hover {
+    color: var(--branco);
+}
+
+
+
+
+@media (max-width: 900px) {
+    section.mainHeader .links .estagio:hover {
+        width: calc(200px + 1rem);
+    }
+}
+
+@media (max-width: 850px) {
+    section.mainHeader .links .estagio:hover .hidden_links {
+        display: none;
+    }
+
+    section.mainHeader .links .estagio:hover a,
+    section.mainHeader .actions a:hover {
+        color: var(--branco);
+        transform: scale(1);
+    }
+
+    section.mainHeader .actions {
+        gap: 0.5rem;
+    }
+
+    section.mainHeader .links .estagio:hover {
+        width: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    section.mainHeader .links .estagio {
+        padding: 0.1rem 0.4rem;
+    }
+}
+
+@media (max-width: 620px) {
+    section.mainHeader {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section.mainHeader .links,
+    section.mainHeader .actions {
+        display: none;
+    }
+
+    section.mainHeader .responsive {
+        display: block;
+    }
+
+    section.mainHeader.active .links,
+    section.mainHeader.active .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    section.mainHeader.active .links .estagio *,
+    section.mainHeader.active .actions a {
+        font-size: 1.5rem;
+    }
+
+    section.mainHeader.active .actions a:hover {
+        color: var(--branco);
+    }
+}
