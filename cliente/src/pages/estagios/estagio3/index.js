@@ -6,10 +6,8 @@ import React from 'react';
 export default () => {
 
     return (
-        <section className='home'>
-            <div className="intro">
-                
-            </div>
+        <section className='estagio'>
+            Estágio
         </section>
     )
 }

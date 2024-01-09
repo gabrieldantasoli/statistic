@@ -35,3 +35,24 @@
 body {
   background-color: var(--branco);
 }
+
+span.blue1 {
+  color: var(--azul-escuro);
+  font-weight: 600;
+}
+
+span.red1 {
+  color: var(--vermelho-escuro);
+  font-weight: 600;
+}
+
+hr {
+  margin: 0.5rem;
+  height: 3px;
+  border: none;
+  background-color: var(--azul-claro);
+}
+
+.left {
+  margin-left: 2rem;
+}
